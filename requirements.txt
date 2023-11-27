@@ -1,4 +1,5 @@
 streamlit
 orange3
+pickle
 scikit-learn
 numpy
