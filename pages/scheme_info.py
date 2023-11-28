@@ -62,7 +62,7 @@ def show_scheme_info(scheme_id):
         show_pmkvy_info()   
     elif scheme_id == 'kisansamman':
         show_kisansamman_info()    
-    elif scheme_id == 'krishisinch':
+    elif scheme_id == 'kisansinch':
         show_krishisinch_info()    
     elif scheme_id == 'pmayg':
         show_pmayg_info()    
