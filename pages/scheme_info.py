@@ -64,9 +64,9 @@ def show_scheme_info(scheme_id):
         show_kisansamman_info()    
     elif scheme_id == 'krishisinch':
         show_krishisinch_info()    
-    elif scheme_id == 'disabilitypension':
-        show_pmayg_info()    
     elif scheme_id == 'pmayg':
+        show_pmayg_info()    
+    elif scheme_id == 'kisancard':
         show_kisancard_info()    
     elif scheme_id == 'agriclinic':
         show_agriclinic_info()    
