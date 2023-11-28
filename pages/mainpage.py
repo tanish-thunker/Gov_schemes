@@ -3,22 +3,14 @@ import pickle
 import streamlit as st
 from sklearn.ensemble import RandomForestClassifier
 import numpy as np
+from pages import helpline_page
 
 st.set_page_config(initial_sidebar_state="collapsed", page_title="Home Page")
 def generate_scheme_info_link(scheme_name, scheme_id):
     return f"[{scheme_name}](/scheme_info?scheme_id={scheme_id})"
 
-# Set custom background color
-st.markdown(
-    """
-    <style>
-        body {
-            background-color: #03294d;  /* Set your preferred color code */
-        }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
+# Loading models
+
 
 model_widow = pickle.load(open("models/widowpension.pkcls", "rb"))
 model_disability = pickle.load(open("models/disabilitypension.pkcls", "rb"))
@@ -129,7 +121,7 @@ def show_main():
     """
     st.markdown(no_sidebar_style, unsafe_allow_html=True)
     
-
+    
     # Custom title
     st.title('Government Scheme Eligibility Prediction')
     st.write('Enter the user details to predict the eligibility for government schemes.')
@@ -254,7 +246,19 @@ def show_main():
             for scheme_name, scheme_id, probability in eligible_schemes:
                 st.markdown(f'[{scheme_name}](/scheme_info?scheme_id={scheme_id}) - Probability: {probability * 100:.2f}%')
     
-  
+
+    st.write("Need Assistance?")
+
+        # Button to navigate to the call helpline numbers page
+    if st.button("Call Helpline Numbers"):
+            helpline_page_link = "[Helpline Numbers Page](/helpline_page)"
+            st.markdown(f"Click the link below to view helpline numbers: {helpline_page_link}")
+            # You can add the redirection logic or any other actions here
+
+        # Button to redirect to another website (chatbot)
+    if st.button("Chat with Chatbot"):
+            st.write("Please click on this link to start: (https://sites.google.com/view/testgovapp/home)")
+
 if __name__ == '__main__':
     show_main()
 

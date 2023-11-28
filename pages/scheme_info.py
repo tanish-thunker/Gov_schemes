@@ -26,35 +26,15 @@ def show_scheme_info(scheme_id):
                 background-color: #F5F5F5;
             }
             .header {
-                color: #004080;
+                color: #FFFFFF;
                 font-size: 24px;
                 font-weight: bold;
                 padding-bottom: 10px;
-                border-bottom: 2px solid #004080;
-                margin-bottom: 20px;
-            }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-
-    st.markdown(
-        """
-        <style>
-            body {
-                color: #1E1E1E;
-                background-color: #F5F5F5;
-            }
-            .header {
-                color: #004080;
-                font-size: 24px;
-                font-weight: bold;
-                padding-bottom: 10px;
-                border-bottom: 2px solid #004080;
+                border-bottom: 2px solid #FFFFFF;
                 margin-bottom: 20px;
             }
             .section-header {
-                color: #004080;
+                color: #FFFFFF;
                 font-size: 20px;
                 font-weight: bold;
                 margin-top: 20px;
